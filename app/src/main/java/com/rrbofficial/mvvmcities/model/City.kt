@@ -1,4 +1,4 @@
-package com.rrbofficial.mvvmcities
+package com.rrbofficial.mvvmcities.model
 data class City (
     val name: String,
     val  img: Int,

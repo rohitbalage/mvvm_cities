@@ -1,4 +1,6 @@
-package com.rrbofficial.mvvmcities
+package com.rrbofficial.mvvmcities.model
+
+import com.rrbofficial.mvvmcities.R
 
 class CityDataProvider {
 
