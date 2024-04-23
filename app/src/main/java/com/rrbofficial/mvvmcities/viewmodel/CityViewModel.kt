@@ -1,6 +1,10 @@
 package com.rrbofficial.mvvmcities.viewmodel
 
+import android.app.Application
 import android.os.Looper
+import android.util.Log
+import androidx.core.content.getSystemService
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -11,7 +15,7 @@ import java.util.logging.Handler
 
 // view model provides Live data that the UI can handle
 
-class CityViewModel : ViewModel(){
+class CityViewModel(application: Application) : AndroidViewModel(application){
 
     // we neeed a live data that we can change the value of
     private  val cityData = MutableLiveData<City>()
@@ -21,6 +25,8 @@ class CityViewModel : ViewModel(){
 
     init {
         loop()
+        Log.d("cityViewmodel", application.toString())
+        Log.d("cityViewmodel", application.filesDir.toString() )
     }
 
     // so the view is going to connect to his city data, retrieve the data here and use it to update the UI
